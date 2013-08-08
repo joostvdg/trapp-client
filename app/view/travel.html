@@ -1,0 +1,19 @@
+<div>
+	<h2>Travel</h2>
+
+	<table class="table table-striped table-bordered table-hover" >
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+			<th>Organizer</th>
+			<th>Travellers</th>
+		</tr>
+		<tr ng-repeat="travel in travels"> 
+			<td>{{travel.name}}</td>
+			<td>{{travel.location.name}} ({{travel.location.locationType}})</td>
+			<td>{{travel.organizer.surname}}, {{travel.organizer.name}} {{travel.organizer.surnamePrefix}}</td>
+			<td></td>
+		</tr>
+	</table>
+
+</div>

@@ -1,0 +1,21 @@
+<div>
+	<h2>Traveller</h2>
+
+	<table class="table table-striped table-bordered table-hover" >
+		<tr>
+			<th>Role</th>
+			<th>Naam</th>
+			<th>Tussenvoegsel</th>
+			<th>Achternaam</th>
+			<th>Email</th>
+		</tr>
+		<tr ng-repeat="traveller in travellers"> 
+			<td>{{traveller.travellerRole}}</td>
+			<td>{{traveller.user.name}}</td>
+			<td>{{traveller.user.surnamePrefix}}</td>
+			<td>{{traveller.user.surname}}</td>
+			<td>{{traveller.user.email}}</td>
+		</tr>
+	</table>
+
+</div>

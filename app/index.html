@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="Main">
+<head>
+  <meta charset="utf-8">
+  <title>TRAPP Client</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <div ng-controller="base">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">TRAPP Client</a>
+        <ul class="nav">
+          <li class="{{path=='' && 'active' || 'inactive'}}"><a href="#">Home</a></li>
+          <li class="{{path=='/users' && 'active' || 'inactive'}}" ><a href="#/users">Users</a></li>
+          <li class="{{path=='/userroles' && 'active' || 'inactive'}}" ><a href="#/userroles">User roles</a></li>
+          <li class="{{path=='/locations' && 'active' || 'inactive'}}" ><a href="#/locations">Location</a></li>
+          <li class="{{path=='/traveller' && 'active' || 'inactive'}}" ><a href="#/traveller">Traveller</a></li>
+          <li class="{{path=='/travel' && 'active' || 'inactive'}}" ><a href="#/travel">Travel</a></li>
+          <li class="{{path=='/trip' && 'active' || 'inactive'}}" ><a href="#/trip">Trip</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div ng-view class="well">
+
+    </div>
+  </div>
+  
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="service/services.js"></script>
+  <script src="controller/controllers.js"></script>
+  <script src="filter/filters.js"></script>
+  <script src="directive/directives.js"></script>
+
+
+</body>
+</html>
