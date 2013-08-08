@@ -10,14 +10,21 @@ De client kan je op verschillende manieren aan de praat krijgen, maar de handigs
 Wanneer je NodeJs hebt, kun je simpel weg de applicatie "starten" door "node trapp" vanaf de commandline in de root folder uit te voeren.<br>
 <br>
 <i>AngularJs </i>
-http://docs.angularjs.org/guide/concepts
-http://www.youtube.com/watch?v=i9MHigUZKEM
+<ul>
+<li>http://docs.angularjs.org/guide/concepts</li>
+<li>http://www.youtube.com/watch?v=i9MHigUZKEM</li>
+<ul>
 <br>
 <i>NodeJs</i>
-http://nodejs.org/
+<ul>
+<li>http://nodejs.org/</li>
+</ul>
 <br>
 <i>Bootstrap</i>
-http://getbootstrap.com/getting-started/
+<ul>
+<li>http://getbootstrap.com/getting-started/</li>
 <br>
 <i>TRAPP</i>
-https://github.com/caladreas/TRAPP
+<ul>
+<li>https://github.com/caladreas/TRAPP</li>
+</ul>
