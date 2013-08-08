@@ -1,19 +1,54 @@
 <div>
 	<h2>Users</h2>
+	<div>
+		<table class="table table-striped table-bordered table-hover" >
+			<tr>
+				<th>Naam</th>
+				<th>Tussenvoegsel</th>
+				<th>Achternaam</th>
+				<th>Email</th>
+			</tr>
+			<tr ng-repeat="user in users"> 
+				<td>{{user.name}}</td>
+				<td>{{user.surnamePrefix}}</td>
+				<td>{{user.surname}}</td>
+				<td>{{user.email}}</td>
+			</tr>
+		</table>
+	</div>
 
-	<table class="table table-striped table-bordered table-hover" >
-		<tr>
-			<th>Naam</th>
-			<th>Tussenvoegsel</th>
-			<th>Achternaam</th>
-			<th>Email</th>
-		</tr>
-		<tr ng-repeat="user in users"> 
-			<td>{{user.name}}</td>
-			<td>{{user.surnamePrefix}}</td>
-			<td>{{user.surname}}</td>
-			<td>{{user.email}}</td>
-		</tr>
-	</table>
+	<div>
+		<form class="form-horizontal simple-form" novalidate>
+			<div class="form-group">
+				 <label for="inputName" class="col-lg-2 control-label">Naam</label>
+				 <div class="col-lg-10">
+			    	<input type="text" class="form-control" id="inputName" placeholder="Naam" ng-model="user.name">
+			    </div>
+
+			    <label for="inputSurnamePrefix" class="col-lg-2 control-label">Tussenvoegsel</label>
+				 <div class="col-lg-10">
+			    	<input type="text" class="form-control" id="inputSurnamePrefix" placeholder="Tussenvoegsel" ng-model="user.surnamePrefix">
+			    </div>
+
+			    <label for="inputSurname" class="col-lg-2 control-label">Surname</label>
+				 <div class="col-lg-10">
+			    	<input type="text" class="form-control" id="inputSurname" placeholder="Surname" ng-model="user.surname">
+			    </div>
+
+				 <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+				 <div class="col-lg-10">
+			    	<input type="text" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
+			    </div>
+		  		
+		  	</div>
+		  <div class="form-group">
+		    <div class="col-lg-offset-2 col-lg-10">
+		      <button class="btn btn-default" ng-click="submit(user)">Submit</button>
+		      <button class="btn btn-default" ng-click="reset()">Clear</button>
+		    </div>
+		  </div>
+		</form>
+  		<pre>submitted = {{master | json}}</pre>
+	</div>
 
 </div>

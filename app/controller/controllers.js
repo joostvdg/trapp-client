@@ -9,15 +9,37 @@ trappClient.controller('base', function($scope, $location, $resource) {
 // User
 trappClient.controller('user', function($scope, $resource, $http) {
 	$scope.method = 'GET';
-  	$scope.url = 'http://localhost:8780/trapp/user';
+  $scope.url = 'http://localhost:8780/trapp/user';
 
-	$http({method: $scope.method, url: $scope.url}).
+  $scope.loadUsers = function() {	
+    $http({method: $scope.method, url: $scope.url}).
       success(function(data, status) {
         $scope.users = data;
       }).
       error(function(data, status) {
         console.log("user call failed", status, data);
     });
+  }
+
+  $scope.submitted = { "user" : null};
+ 
+  var successCallback = function() {
+    $scope.loadUsers();
+    $scope.reset();
+  }
+
+  $scope.submit = function(user) {
+    $scope.submitted.user = angular.copy(user);
+    $http.put('http://localhost:8780/trapp/user', $scope.submitted).success(successCallback);
+  };
+ 
+  $scope.reset = function() {
+    $scope.user = {};
+  };
+ 
+  $scope.reset();
+
+  $scope.loadUsers();
 
 });
 
