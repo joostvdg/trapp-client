@@ -13,7 +13,7 @@ Wanneer je NodeJs hebt, kun je simpel weg de applicatie "starten" door "node tra
 <ul>
 <li>http://docs.angularjs.org/guide/concepts</li>
 <li>http://www.youtube.com/watch?v=i9MHigUZKEM</li>
-<ul>
+</ul>
 <br>
 <i>NodeJs</i>
 <ul>
@@ -23,6 +23,7 @@ Wanneer je NodeJs hebt, kun je simpel weg de applicatie "starten" door "node tra
 <i>Bootstrap</i>
 <ul>
 <li>http://getbootstrap.com/getting-started/</li>
+</ul>
 <br>
 <i>TRAPP</i>
 <ul>
